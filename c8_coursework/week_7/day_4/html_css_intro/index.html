@@ -1,0 +1,95 @@
+<!-- HTML & CSS Intro
+    Web app has 2 key areas: 1) backend, 2) frontend
+
+    Frontend technologies: 
+    - 1) HTML (HyperText Markup Language) - provides structure to the webpage 
+    - 2) CSS (Cascading Style Sheets) - how it looks (style)
+    - 3) JS (JavaScript) - allows for interactivity and dynamic behaviour 
+
+-->
+
+<!-- HTML Page Structure  -->
+<!-- type "!" and hit enter to get barebones structure for the page -->
+<!-- to open in chrome from terminal command : open index.html -a Google\ Chrome -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My New Blog</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        /* INLINE CSS */
+        /* body{
+            background-color: aliceblue;
+            color: #4c4949;
+        }
+
+        #main_nav>ul {
+            display: flex; 
+            justify-content: space-around;
+            background-color: #4c4949;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        #main_nav>ul>li {
+            list-style: none;
+        }
+
+        #main_nav>ul>li>a {
+            text-decoration: none;
+            color:#4c4949;
+            background-color: whitesmoke;
+            padding: 0.5em;
+        } */
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My New Blog</h1>
+        <h3>Some other stuff</h3>
+        <p>Bla bla bla</p>
+        <nav id="main_nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h3>Hi</h3>
+        <article>
+            <h4>Some article</h4>
+            <p style="background-color: gainsboro;">Bla bla bla</p>
+        </article>
+        <button id="say_hi">Click me!</button>
+    </main>
+    
+    <footer></footer>
+
+    <script src="index.js" defer>
+        
+        // const hello = () => {
+        //     const response = prompt("Hello! Say something..");
+        //     document.getElementsByTagName("body")[0].innerText = response; 
+        //     // this will destrory the page after input - not useful
+        //     // use alert instead
+
+        // }
+
+        // document.getElementById("say_hi").addEventListener("click", hello);
+    </script>
+</body>
+</html>
+
+<!-- emmet abbreviation
+    h1+p 
+    h1+h3+p
+    nav>ul>li*3
+-->

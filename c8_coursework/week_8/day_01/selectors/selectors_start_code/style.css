@@ -1,0 +1,180 @@
+/* tick the disable cache box in dev tools under network when styling css */
+
+/* ELEMENT SELECTOR */
+
+header {
+    background-color: #f6e7d5;
+    display: flex; 
+    /* flex moves the children to the side front below */
+    align-items: center;
+    /* centers them vertically, otherwise flex-end for the bottom, flex-start for top */
+}
+
+header>nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    /* spaces out everything in the nav */
+}
+
+h1 {
+    width: 25%;
+    /* makes our h1 responsive and relative as well as the nav */
+
+}
+
+footer {
+    background-color: #fdf2d1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+
+
+/* CLASS SELECTOR */
+
+.products {
+    background-color: #e5efdb;
+}
+
+.contact {
+    background-color: #e0eaf5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact>div {
+    width: 50%;
+}
+
+
+/* or show it as a child descendant of the class using > for direct selection */
+.card>img {
+    /* be careful with setting absolute dimensions with px only when you need something to be exact */
+    /* can use vw or vh for responsive sizes */
+    /* can use em to be absolute with font size */
+    width: 300px;
+}
+
+
+/* ID SELECTOR - use a #
+#main_menu {} */
+
+
+/* DESCENDENT COMBINATOR */
+/* space indicates a combinator so here we want to style all imgs in cards - takes all imgs nested inside - in divs etc */
+footer img {
+    width: 150px;
+}
+
+.contact div form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* container */
+.products__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* puts all cards on to one line - fr = fraction  keeps them relative*/
+    grid-gap: 20px;
+}
+
+.footer__logo {
+    text-align: right;
+}
+
+footer div,
+footer nav {
+    display: flex;
+    flex-direction: column;
+}
+
+footer a, 
+footer p {
+    margin: 10px 0;
+    /* top right bottom left - order that margin will take the values and apply them */
+    
+    /* border: 1px solid black;
+    padding: 10px; */
+}
+
+header, section , footer {
+    padding: 20px;
+}
+
+body {
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #4b73c1;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input{
+    padding: 10px;
+    max-width: 300px;
+    margin: 10px;
+}
+
+button, input[type = "submit"]{
+    background-color: #4c73c1;
+    padding: 10px;
+    width: 100px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 3px solid #3c5370;
+}
+/* to target one button you have to add an id to it in html and refer to it here #id */
+
+.contact__text{
+    width: 60%;
+}
+
+.contact__form{
+    width: 40%;
+}
+
+/* read top to bottom so media queries at bottom or on different file */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px){
+    /* body{
+        background-color: pink;
+    } */
+
+    .products__container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header nav {
+        width: 75%;
+    }
+}
+/* rules within this will only be applied as the screen size gets under 900 px */
+
+@media screen and (max-width: 600px){
+    .products__container, footer{
+        grid-template-columns: 1fr;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .contact{
+        flex-direction: column;
+    }
+
+    .contact div {
+        width: 100%;
+    }
+}

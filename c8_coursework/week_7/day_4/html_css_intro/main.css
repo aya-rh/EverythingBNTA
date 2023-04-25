@@ -1,0 +1,26 @@
+/* advantage to external style sheets is that you can use it for many webpages - not limited to one */
+/* link to html file through a link - <link rel="stylesheet" href="main.css"> */
+
+body{
+    background-color: aliceblue;
+    color: #4c4949;
+}
+
+#main_nav>ul {
+    display: flex; 
+    justify-content: space-around;
+    background-color: #4c4949;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#main_nav>ul>li {
+    list-style: none;
+}
+
+#main_nav>ul>li>a {
+    text-decoration: none;
+    color:#4c4949;
+    background-color: whitesmoke;
+    padding: 0.5em;
+}
